@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%; /* Garante que o corpo da página ocupe toda a largura */
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -48,7 +49,7 @@ body {
     width: auto;
   }
 
-  @media (min-width: 600px){
+  @media (min-width: 1024px){
     .logo img{
       margin-left: 70px;
     }
@@ -90,7 +91,7 @@ body {
   }
   
   /* Menu aparece apenas em telas menores */
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .menu {
       display: block; /* Exibe o menu */
     }
@@ -166,7 +167,52 @@ body {
     overflow: hidden;
     margin: 0;
   }
+
+  /*@@ ajust tamanhos da div1 em telas diferentes @@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+  @media (min-width: 320px){
+
+    .div1 {
+      height: 430px;
+    }
+
+  }
+
+  @media (min-width: 600px){
+
+    .div1 {
+      height: 530px;
+    }
+
+  }
+
+  @media (min-width: 768px){
+
+    .div1 {
+      height: 550px;
+    }
+
+  }
+
+  @media (min-width: 1024px){
+
+    .div1 {
+      height: 650px;
+    }
+
+  }
   
+
+  @media (min-width: 1440px){
+
+    .div1 {
+      height: 690px;
+    }
+
+  }
+
+  /*###### ajustes div1 end em telas diferentes end ############### ajustes div1 telas tamanhos diferentes end #######3*/
+
   /* Fundo com efeito fixo */
   .background {
     position: absolute;
@@ -190,32 +236,100 @@ body {
     font-size: 2.8rem;
     color: #fff;
     transition: transform 0.1s ease-out;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
   }
 
 /* @@@@@@@@@@@@ AJUSTE DOS TEXTOS DA CAPA EM TELAS DIFERENTES TAMANHOS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 768px) {
+  .textos-content {
+    width: 90%; /* Ocupa quase toda a tela */
+  }
 
-  @media screen and (max-width: 600px){
-    .textos-content{
-      margin-top: 50px;
+  .textos-content h2 {
+    width: 100%; /* Força o h2 a ocupar toda a largura disponível */
+    word-wrap: break-word; /* Quebra o texto em palavras se necessário */
+  }
+}
+
+
+  @media (min-width: 320px) {
+    .textos-content h2{
+      margin-top: 90px;
+      font-size: 30px;
+      margin-left: 0px;
+      margin-right: 0px;
     }
+  }
 
-    .textos-content h2 {
-      font-size: 3.2rem; /* Tamanho menor para telas pequenas */
+  
+  @media (min-width: 375px) {
+    .textos-content h2{
+      margin-top: 110px;
+      font-size: 40px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  @media (min-width: 425px) {
+    .textos-content h2{
+      margin-top: 115px;
+      font-size: 45px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+
+  @media (min-width: 600px) {
+    .textos-content h2{
+      margin-top: 130px;
+      font-size: 55px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .textos-content h2{
+      margin-top: 95px;
+      font-size: 60px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .textos-content h2{
+      margin-top: 110px;
+      font-size: 65px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .textos-content h2{
+      margin-top: 110px;
+      font-size: 80px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  @media (min-width: 2256px) {
+    .textos-content h2{
+      margin-top: 110px;
+      font-size: 110px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
   }
 
   /*############## ajuste textos da capa em diferentes tamanhos de tela ################################*/ 
 
 
-  }  
-  .content-scroll {
-    height: 2000px;
-    padding: 20px;
-    text-align: center;
-  }
-  .content h2 {
-    margin: 10px 0;
-  }
+  
 
   /* @@@@@@@@@ CONFIGURAÇÕES BTN-CONTATO E FIX CENTER @@@@@@@@@@@@@@@*/
 
@@ -275,9 +389,186 @@ body {
     padding: 0; 
   }
 
+
   .msg p{
     margin: 150px;
   }
 
+  @media (min-width: 320px){
+
+    .msg p{
+
+      font-size: 22px;
+      margin: 10px;
+
+    }
+
+  }
+
+  @media (min-width: 600px){
+
+.msg p{
+
+  font-size: 24px;
+  margin: 20px;
+
+}
+
+  }
+
+  @media (min-width: 1024px){
+
+    .msg p{
+      font-size: 30px;
+      margin: 30px;
+    }
+
+  }
+
   /*#### DIV MSG END ######### DIV MSG END ####### DIV MSG END #######################
   ################ END DIV MSG ############################################*/
+
+
+
+
+  /* @@@@@ porfifolio @@@@@@@@ portifolio @@@@@@ portifolio @@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* Estilo da Div Portifolio */
+.portifolio {
+  background-color: #fdf5e6; /* Cor areia creme claro */
+  padding: 20px;
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Estilo do Título */
+.portifolio .titulo p {
+  font-family: "Cursive", Georgia, 'Times New Roman', Times, serif; /* Fonte bonita e desenhada */
+  color: #2f5050; /* Verde escuro musgo */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Container dos Quadrados */
+.portif-container {
+  display: flex;
+  justify-content: center; /* Centraliza os itens no eixo horizontal */
+  gap: 50px; /* Espaço entre os quadrados */
+  flex-wrap: wrap; /* Permite quebra em telas menores */
+}
+
+/* Estilo dos Quadrados */
+.quadrado {
+  width: 416px;   /* padrão 832px por 520px na metade */
+  height: 260px;    /* padrão 832px por 520px na metade */
+  background-color: #dcdcdc; /* Cor cinza clara para destacar os quadrados */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Indica que é clicável */
+  border: 2px solid #2f4f4f; /* Borda verde escuro musgo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quadrado:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem dentro dos Quadrados */
+.quadrado img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* Responsividade para Telas Pequenas */
+@media (max-width: 600px) {
+  .portif-container {
+    flex-direction: column; /* Quadrados ficam um embaixo do outro */
+    align-items: center; /* Centraliza os quadrados no eixo horizontal */
+    gap: 10px; /* Ajusta o espaço entre os quadrados */
+  }
+
+  .quadrado {
+    width: 90%; /* Ajusta a largura para 90% da tela */
+    max-width: 250px; /* Garante que o tamanho máximo seja 250px */
+    height: auto; /* Altura proporcional à largura */
+  }
+
+  .quadrado img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do quadrado */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+}
+
+
+  /* ######### portifolio ######## ######### portifolio ################# portifolio ######## */
+
+
+  /*@@@@@@@ div msg1 @@@@@@@@@@@@@ div msg1 @@@@@@@@@ div msg1 @@@@@@@2*/
+
+  .msg1 {
+    background-color: #1d7979;
+    color: #fffacd;
+    font-size: 38px;
+    text-align: center;
+    font-style: italic;
+    height: 200px;
+    
+  
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Remover margens automáticas que podem criar o espaço */
+    margin: 0; 
+    padding: 0; 
+  }
+
+
+  .msg1 p{
+    margin: 150px;
+  }
+
+  @media (min-width: 320px){
+
+    .msg1 p{
+
+      font-size: 22px;
+      margin: 10px;
+
+    }
+
+  }
+
+  @media (min-width: 600px){
+
+.msg1 p{
+
+  font-size: 24px;
+  margin: 20px;
+
+}
+
+  }
+
+  @media (min-width: 1024px){
+
+    .msg1 p{
+      font-size: 30px;
+      margin: 30px;
+    }
+
+  }
+
+  /*####### div msg1 end ####### div msg1 end ######### div msg1 end ###### div msg1 end######*/
+
+
+
+  /*@@@@@@ div contatos @@@@@@ div contatos @@@@@@ div contatos @@@@@@@@@@*/
+
+  
+
+
+  /*##### div contatos end ####### div contatos end ######### div conattos end ######*/
