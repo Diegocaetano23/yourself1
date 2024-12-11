@@ -1,0 +1,283 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/*@@@@@@@@@ @@@@@@@ topnav @@@@@@@@@ topnav @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@ TOPNAV @@@@@@@@@@@ TOPNAV @@@@@@@@@@@@ TOPNAV @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/* Estilando o topnav para garantir seu limite */
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Garante a mesma largura do conteúdo */
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  /* @@@@@@@ altura do topnav em telas acima de 600px @@@@@@@@@@@@@@@@*/
+
+  @media (min-width: 600px) {
+
+    .topnav{
+      height: 123px;
+    }
+    
+  }
+
+ 
+
+  /* ########### altura do topnav acima 600px end ######## topnav altura acima 600px end end #############*/
+ 
+  /* Estilo da logo */
+  .logo img {
+    max-height: 80px;
+    width: auto;
+  }
+
+  @media (min-width: 600px){
+    .logo img{
+      margin-left: 70px;
+    }
+  }
+  
+
+/* Centralização dos links */
+.top-links {
+  display: flex;
+  justify-content: center; /* Centraliza os itens no eixo horizontal */
+  align-items: center; /* Garante o alinhamento vertical */
+  gap: 100px; /* Espaço entre os itens */
+  flex: 1; /* Garante que os links ocupem todo o espaço disponível */
+}
+
+  .top-links p {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(38, 129, 87);
+    cursor: pointer;
+  }
+  
+  .top-links p:hover {
+    color: #555;
+  }
+
+  
+  /* Estilo do menu (ícone para dropdown) */
+  .menu img {
+    max-height: 40px; /* Tamanho do ícone */
+    width: auto;
+  }
+
+.menu {
+    display: none; /* Oculta o menu por padrão */
+    position: relative;
+  }
+  
+  /* Menu aparece apenas em telas menores */
+  @media (max-width: 600px) {
+    .menu {
+      display: block; /* Exibe o menu */
+    }
+  
+    .top-links {
+      display: none; /* Oculta links padrão */
+    }
+  }
+  
+  /* @@@@@@@@@@ DROPDOWN AND MENU @@@@@@@@@@@@*/
+  
+ /* Estilando o botão menu */
+ .menu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  /* Ícone de menu */
+  .menu img {
+    max-height: 40px;
+    width: auto;
+  }
+  
+
+  /* Dropdown - Estilando */
+  .dropdown-content {
+    display: none; /* Ocultar inicialmente */
+    position: fixed; /* Usa o viewport da página como referência */
+    top: 156%; /* Centralizar verticalmente */
+    left: 50%; /* Centralizar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para alinhar ao centro */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000;
+    width: 150px;
+}
+
+  
+  /* Quando ativo */
+  .dropdown-content.active {
+    display: block;
+  }
+  
+  .dropdown-content p {
+    margin: 5px 0;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+
+  }
+  
+  .dropdown-content p:hover {
+    color: #555;
+  }
+  
+  
+  /*####### DROPDOWN AND MENU END ########*/
+
+  /* ########### TOPANV END topnav end ############## topnav end ########## topnav end########################
+  ######################## TOPNAV END ################## END TOPNAV ##########################################*/
+
+
+  /*@@@@@@@@@@@ DIV1 @@@@@@@@@@@@DIV 1 DIV 1 DIV1 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  DIV1 @@@@@@@@@@@@@@@@@@@@@@ DIV1 @@@@@@@@@@@@@@@@@@@@ DIV1 @@@@@@@@ DIV1 @@@@@@@@@@@@@ DIV1 @@@@@@@@@@@@@@@*/
+
+  .div1 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  /* Fundo com efeito fixo */
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url('/src/css/img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* Textos centrais */
+  .textos-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2.8rem;
+    color: #fff;
+    transition: transform 0.1s ease-out;
+    font-family:Georgia, 'Times New Roman', Times, serif
+  }
+
+/* @@@@@@@@@@@@ AJUSTE DOS TEXTOS DA CAPA EM TELAS DIFERENTES TAMANHOS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+  @media screen and (max-width: 600px){
+    .textos-content{
+      margin-top: 50px;
+    }
+
+    .textos-content h2 {
+      font-size: 3.2rem; /* Tamanho menor para telas pequenas */
+  }
+
+  /*############## ajuste textos da capa em diferentes tamanhos de tela ################################*/ 
+
+
+  }  
+  .content-scroll {
+    height: 2000px;
+    padding: 20px;
+    text-align: center;
+  }
+  .content h2 {
+    margin: 10px 0;
+  }
+
+  /* @@@@@@@@@ CONFIGURAÇÕES BTN-CONTATO E FIX CENTER @@@@@@@@@@@@@@@*/
+
+  .fix-center {
+    text-align: center;
+    align-items: center;
+  }
+
+  .btn-contato button {
+    background-color: #1c794c; /* Verde musgo */
+    color: #ffeedc; /* Amarelo areia claro */
+    font-size: 19px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid#fffacd; /* Um tom mais claro para o contorno */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição para hover */
+  }
+  
+  .btn-contato button:hover {
+    background-color: #6b8e23; /* Um verde musgo mais vibrante */
+    color: #fffacd; /* Um amarelo mais claro ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom */
+  }
+  
+  
+
+  /*####### BTN CONTATOS E FIX CENTER ###### END BTN CONTATOS E FIX CENTER #########*/
+
+  
+
+  /*############## div1 end DIV 1 END #####################################################################
+  ############## DIV1 END ######################### DIV1 END ################# DIV1 END ###################*/
+
+
+
+
+  /*@@@@@@@@ DIV MSG @@@@@ DIV MSG @@@@@@ DIV MSG @@@@@@@@@@@@@@@@@@@@@ dIV MSG @@@@@@@@@@@@@@@@*/
+
+  .msg {
+    background-color: #1c794c;
+    color: #fffacd;
+    font-size: 38px;
+    text-align: center;
+    font-style: italic;
+    height: 200px;
+    
+  
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Remover margens automáticas que podem criar o espaço */
+    margin: 0; 
+    padding: 0; 
+  }
+
+  .msg p{
+    margin: 150px;
+  }
+
+  /*#### DIV MSG END ######### DIV MSG END ####### DIV MSG END #######################
+  ################ END DIV MSG ############################################*/
